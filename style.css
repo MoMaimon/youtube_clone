@@ -12,11 +12,27 @@ button {
     cursor: pointer;
 }
 
-
-
+body {
+    height: 3000px;
+}
 
 svg {
     color: 222222;
+}
+
+
+.nunito-regular {
+  font-family: "Nunito", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nunito-bold {
+  font-family: "Nunito", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 700; 
+  font-style: normal;
 }
 /* -------------------------------------------------------------------------- */
 /*                               Nav Bar styles                               */
@@ -24,11 +40,21 @@ svg {
 
 nav {
     display: flex;
+    /* position: sticky; */
+    /* top: 11px; */
     justify-content: space-between;
     align-items: center;
     height: 48px;
-    padding: 0 35px 0 20px;
-    margin-top: 11px;
+    padding:0 35px 0 20px;
+    /* margin-top: 11px; */
+    /* background: #13219e; */
+}
+
+.nav-div{
+    padding: 11px 0;
+    position: sticky;
+    top: 0;
+    background: #fff;
 }
 
 /* ------------------------------ Left Nav Bar ------------------------------ */
@@ -61,7 +87,7 @@ nav {
     padding-right: 12px;
 }
 
-.search-icon {
+.search-icon {      
     display: flex;
     background: #F0EBEB;
     width: 64px;
@@ -89,4 +115,94 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 22px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  Main Body                                 */
+/* -------------------------------------------------------------------------- */
+
+.main-body {
+    margin-left: 20px;
+    height: 100%;
+}
+
+/* ------------------------------- Catagories ------------------------------- */
+.catagories {
+    display: flex;
+    gap: 12px;
+    position: sticky;
+    top: 70px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.catagory-widget {
+    padding: 6px 10px;
+    background: #ECECEC;
+    color: #333333;
+    border-radius: 6px;
+    font-size: 14px;
+    height: 31px;
+    text-wrap: nowrap;
+}
+.all {
+    background: #333;
+    color: #fff;
+}
+
+/* --------------------------------- Videos --------------------------------- */
+
+.vid-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.vid-card {
+    border-radius: 12px;
+    /* background: #6786b4; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: start;
+    padding: 12px;
+    gap: 12px;
+}
+
+.vid-name {
+    font-size: 16px;
+    color: #333333;
+}
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.creator > p {
+    color: #FF791A;
+    font-size: 12px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.card-info > p {
+    color: rgba(51, 51, 51, 0.44);
+    font-size: 13px;
+}
+
+.vid-card > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    /* height: 50%; */
+    object-fit: cover;
+    border-radius: 12px;
 }
